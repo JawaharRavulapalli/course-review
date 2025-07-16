@@ -46,7 +46,7 @@ public class CourseService {
     public CourseResponseDTO updateCourse(Long id, Course updatedCourse) {
         Course existing = courseRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Course not found with ID: " + id));
-        existing.setName(updatedCoursegit.getName());
+        existing.setName(updatedCourse.getName());
         existing.setDescription(updatedCourse.getDescription());
         existing.setInstructor(updatedCourse.getInstructor());
 
